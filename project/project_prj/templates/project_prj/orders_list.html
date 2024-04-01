@@ -1,0 +1,38 @@
+{% extends 'project_prj/base.html' %}
+
+{% block title %}
+Заказы клиента
+{% endblock %}
+
+{% block content %}
+<header>
+    <h1><i class="fa-solid fa-cart-shopping fa-beat-fade" style="color: #525dff;"></i>Список заявок</h1>
+</header>
+<div class="order-list-content">
+    <h2>{{ title }}</h2>
+    {% if orders %}
+    <table class="table-orders">
+        <tr>
+            <td>Номер услуги</td>
+            <td>Дата записи</td>
+            <td>Название услуги</td>
+            <td>Номер телефона</td>
+            <td>Описание</td>
+            <td>Имя</td>
+        </tr>
+        {% for elem in orders %}
+        <tr>
+            <td>{{ elem.id }}</td>
+            <td>{{ elem.created }}</td>
+            <td>{{ elem.task }}</td>
+            <td>{{ elem.phone }}</td>
+            <td>{{ elem.description }}</td>
+            <td>{{ elem.owner }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>У нас нет записей</p>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'project_prj/base.html' %}
+
+{% block title %}
+Запись на услуги
+{% endblock %}
+
+{% block content %}
+<h2>Оставить заявку на фотоссею мечты.</h2>
+<br>
+<form method="post">
+    {% csrf_token %}
+    {{ form.created }}<br><br>
+    <p>{{ task_info}}</p><br>
+    {{ form.phone }}<br><br>
+    {{ form.description }}<br><br>
+    <button type="submit" class="btn btn-success" style="background-color: #621F1F;">Отправить</button>
+    <span>{{ error }}</span>
+
+</form>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'project_prj/base.html' %}
+{% load static %}
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<header>
+    <h1><i class="fa-brands fa-usps fa-beat-fade" style="color: #525dff "></i>Услуги</h1>
+</header>
+<div class="wrap">
+    {% if tasks %}
+    <div class="perfumery">
+        {% for elem in tasks %}
+        <div class="centered-text">
+            <img src="{{ elem.thumbnail.url }}" alt="{{ elem.name }}" width="150"/>
+            <h1>{{ elem.name }}</h1>
+            <h3>{{ elem.place }}</h3>
+            <div class="button-container">
+                <a href="{% url 'orders-create' elem.id %}" class="button">Записаться</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p>Нет услуг!</p>
+    {% endif %}
+</div>
+    {% endblock %}

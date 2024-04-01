@@ -1,0 +1,38 @@
+{% extends 'project_prj/base.html' %}
+{% load static %}
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<header>
+  <h1><i class="fa-solid fa-house-user fa-beat-fade" style="color: #525dff;"></i>Главная</h1>
+</header>
+<body>
+<h1> Фото</h1>
+<div class="gallery">
+    <div class="top-row">
+        <img src="{% static 'project_prj/img/11.jpg' %}" alt="Image 1">
+        <img src="{% static 'project_prj/img/12.jpg' %}" alt="Image 1">
+        <img src="{% static 'project_prj/img/13.jpg' %}" alt="Image 3">
+    </div>
+    <div class="bottom-row">
+        <img src="{% static 'project_prj/img/14.jpg' %}" alt="Image 4">
+        <img src="{% static 'project_prj/img/15.jpg' %}" alt="Image 5">
+        <img src="{% static 'project_prj/img/16.jpg' %}" alt="Image 6">
+    </div>
+    <body>
+    <div class="centered-text">
+        <h1>Услуги</h1>
+        <p>1. Фотосъёмка различных событий (свадьбы, дни рождения, корпоративные мероприятия и т.д.).<br>
+            2. Проведение профессиональных фотосессий (портреты, семейные съёмки, фэшн-съёмки и пр.).<br>
+            3. Ретушь и обработка фотографий.<br>
+            4. Печать фотографий на различных материалах (бумага, холст, фотокниги и пр.).<br>
+            5. Прокат фотооборудования.<br>
+            6. Обучение фотографии (мастер-классы, курсы).<br>
+            7. Аренда фотостудии для проведения съёмок.<br>
+            8. Изготовление и продажа фоторамок, альбомов и других аксессуаров.<br>
+             </p>
+    </div>
+    </body>
+    {% endblock %}

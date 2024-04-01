@@ -1,0 +1,19 @@
+{% extends 'project_prj/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<header>
+    <h3><i class="fa-solid fa-trash" style="color: #d896d2;"></i>Удаление записи</h3>
+  </header>
+<div class="features">
+    
+    <form method="post">
+        {% csrf_token %}
+        <p>Вы уверены?</p>
+        <button class="btn btn-success" type="submit">Удалить запись</button>
+    </form>
+</div>
+{% endblock %}

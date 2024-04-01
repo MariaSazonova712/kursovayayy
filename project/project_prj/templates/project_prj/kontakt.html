@@ -1,0 +1,24 @@
+{% extends 'project_prj/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+</head>
+<body>
+<title>Контактная информация</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="contact-info">
+    <h1>Наши контакты</h1>
+    <ul>
+        <li><strong>Телефон:</strong> +7 (123) 456-78-90</li>
+        <li><strong>Email:</strong> example@example.com</li>
+        <li><strong>Адрес:</strong> ул. Примерная, д. 123, офис 456</li>
+    </ul>
+</body>
+ <a href="{% url 'rasp' %}" class="button">Назад</a>
+</html>
+{% endblock %}
